@@ -48,9 +48,9 @@ function ToDoList() {
 
       
       <div className="filter-buttons" style={{ display: 'flex', gap: '10px', marginBottom: '20px' }}>
-        <Button text="הכל" onClick={() => setFiltering("All")} />
-        <Button text="פעילות" onClick={() => setFiltering("Active")} />
-        <Button text="הושלמו" onClick={() => setFiltering("Completed")} />
+        <Button text="כל המטלות " onClick={() => setFiltering("All")} />
+        <Button text="מטלות פעילות" onClick={() => setFiltering("Active")} />
+        <Button text="מטלות שבוצעו" onClick={() => setFiltering("Completed")} />
       </div>
 
       <div className="list-container">
