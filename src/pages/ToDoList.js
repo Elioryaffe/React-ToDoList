@@ -17,13 +17,13 @@ function ToDoList() {
   };
 
   const deleteItem = (idToDelete) => {
-    const updatedItems = items.filter((item) => item.id !== idToDelete)
+    const updatedItems = items.filter((item) => item.id != idToDelete)
     setItems(updatedItems)
   };
 
   const toggleComplete = (idToToggle) => {
     const updatedItems = items.map((item) => {
-      if (item.id === idToToggle) {
+      if (item.id == idToToggle) {
         return { ...item, isCompleted: !item.isCompleted }
       }
       return item
