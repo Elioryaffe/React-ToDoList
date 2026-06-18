@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import TodoInput from '../components/TodoInput';
+import React, { useState } from 'react'
+import TodoInput from '../components/TodoInput'
 import './ToDoList.css';
-import Button from '../components/Button'; 
+import Button from '../components/Button'
 
 function ToDoList() {
   const [items, setItems] = useState([]);
@@ -12,23 +12,23 @@ function ToDoList() {
       id: Date.now(),
       text: newItemText,
       isCompleted: false 
-    };
-    setItems([...items, newTodoObject]);
+    }
+    setItems([...items, newTodoObject])
   };
 
   const deleteItem = (idToDelete) => {
-    const updatedItems = items.filter((item) => item.id !== idToDelete);
-    setItems(updatedItems);
+    const updatedItems = items.filter((item) => item.id !== idToDelete)
+    setItems(updatedItems)
   };
 
   const toggleComplete = (idToToggle) => {
     const updatedItems = items.map((item) => {
       if (item.id === idToToggle) {
-        return { ...item, isCompleted: !item.isCompleted };
+        return { ...item, isCompleted: !item.isCompleted }
       }
-      return item;
+      return item
     });
-    setItems(updatedItems);
+    setItems(updatedItems)
   };
 
   const filteredItems = items.filter((item) => {
@@ -73,7 +73,7 @@ function ToDoList() {
         ))}
       </div>
     </div>
-  );
+  )
 }
 
-export default ToDoList;
+export default ToDoList

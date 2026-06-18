@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import Button from './Button';
+import React, { useState } from 'react'
+import Button from './Button'
 
-function TodoInput({ onAdd }) {
-  const [taskText, setTaskText] = useState("");
+function TodoInput(props) {
+  const [taskText, setTaskText] = useState("")
 
   const handleAddClick = () => {
-    if (taskText != "") {
-      onAdd(taskText);
-      setTaskText(""); 
+    if (taskText !== "") {
+      props.onAdd(taskText)
+      setTaskText("")
     }
-  };
+  }
 
   return (
     <div className="input-container">
@@ -20,10 +20,10 @@ function TodoInput({ onAdd }) {
         value={taskText}
         onChange={(e) => setTaskText(e.target.value)}
       />
-      
+
       <Button text="הוסף" onClick={handleAddClick} />
     </div>
-  );
+  )
 }
 
-export default TodoInput;
+export default TodoInput
